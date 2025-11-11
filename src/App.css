@@ -1,0 +1,14 @@
+/* max-w-2xl mx-auto mt-8 p-4 bg-white rounded-lg shadow */
+.faq-main {
+  display: grid;
+  place-content: center;
+}
+
+/* text-xl font-bold mb-4 */
+.faq-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: xx-large;
+  margin-inline: 4px;
+  padding-bottom: 4px;
+}

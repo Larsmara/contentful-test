@@ -1,0 +1,79 @@
+.details-main {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background-color: rgba(255, 255, 255, 0.04);
+  overflow: hidden;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+  width: 50dvw;
+}
+
+.details-main:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.details-main summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 0.8rem 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  color: inherit;
+}
+
+.details-main summary::-webkit-details-marker {
+  display: none;
+}
+
+.details-main[open] summary {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.details-main summary::after {
+  content: "▾";
+  font-size: 1.1rem;
+  opacity: 0.7;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.details-main:hover summary::after {
+  opacity: 1;
+}
+
+.details-main[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.details-main > div {
+  padding: 0.8rem 1rem 1rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+@media (prefers-color-scheme: light) {
+  .details-main {
+    border-color: #ddd;
+    background-color: #fafafa;
+  }
+
+  .details-main:hover {
+    border-color: #bbb;
+    background-color: #f2f2f2;
+  }
+
+  .details-main[open] summary {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .details-main > div {
+    color: #213547;
+  }
+}
