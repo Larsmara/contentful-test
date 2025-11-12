@@ -11,7 +11,6 @@ export function mapContentfulDataToFaq(data: ContentfulData): FAQ[] {
   return data.items.map(mapContentfulItem);
 }
 
-// Mapper ett FAQ-objekt
 function mapContentfulItem(item: ContentfulItems): FAQ {
   const accordionItems = item.fields.accordionItems || [];
 
@@ -23,7 +22,6 @@ function mapContentfulItem(item: ContentfulItems): FAQ {
   };
 }
 
-// Mapper hvert spørsmål/svar-par (accordion item)
 function mapAccordionItem(entry: AccordionItems): FAQItem {
   return {
     id: entry.sys?.id ?? crypto.randomUUID(),

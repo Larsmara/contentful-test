@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Loader } from "./components/Loader";
 import { getContentfulData } from "./api";
 import type { FAQ } from "./types";
-import { Accordion } from "./components/Accordion";
+import { Accordion } from "./components/Accordion/Accordion";
 import "./App.css";
 
 export function App() {
